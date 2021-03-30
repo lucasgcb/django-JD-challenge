@@ -2,8 +2,23 @@ version: '3.0'
 services:
   db:
     image: postgres:12
+    networks:
+      - backend
     ports:
       - "5432:5432"
-    environment:
-      POSTGRES_PASSWORD: "challenge"
-      POSTGRES_DB: "challenge"
+    env_file:
+     - ./env/db.env
+  django:
+    build: ./jungle_code/
+    networks:
+      - backend
+    env_file:
+     - ./env/django.env
+    volumes:
+      - ./jungle_code/:/code
+    ports:
+      - "8000:8000"
+    entrypoint: /code/wait-for-it.sh db:5432 -t 0 -- /code/django-entrypoint.sh
+
+networks:
+  backend:
