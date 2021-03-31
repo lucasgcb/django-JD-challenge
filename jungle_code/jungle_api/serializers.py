@@ -45,11 +45,11 @@ class ArticleSerializer(serializers.ModelSerializer):
  class Meta:
   model = Article
   depth = 1
-  fields = ('id', 'title','author','category','summary')
+  fields = ('id', 'title','author','category','summary', 'firstParagraph', 'body')
 
 class ArticleBasicSerializer(serializers.ModelSerializer):
  summary = serializers.CharField(max_length=200)
  class Meta:
   model = Article
   depth = 1
-  fields = ('id', 'title','author','category','summary')
+  fields = ('id', 'title','author','category','summary', 'firstParagraph')
