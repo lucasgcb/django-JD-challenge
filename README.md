@@ -28,6 +28,8 @@ For more details on the endpoints, the API is documented with [drf-yasg](https:/
 /api/redoc/
 ```
 
+If you use [Insomnia](https://insomnia.rest/download) for REST API development, check out [/docs/](./docs/) for importing and performing test requests.
+
 ## Launching the app in Development mode
 
 To set up the application for development, follow these steps: 
