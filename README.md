@@ -46,7 +46,7 @@ git clone https://github.com/lucasgcb/django-JD-challenge.git
 $ cd django-JD-challenge
 ```
 
-4 - Set the environment variables on docker-compose.yml. 
+4 - Set the environment variables on [docker-compose.yml](https://github.com/lucasgcb/django-JD-challenge/blob/main/docker-compose.yml#L18-L19). 
 - Setting `DEBUG=1` will turn Django's debug mode, and `PYSVR=1` will allow for `manage.py`'s runserver option on http://localhost:8000
 -  If `PYSVR=0`, Docker will launch Django behind gunicorn and whitenoise on http://localhost:8000 
 
@@ -65,7 +65,7 @@ To make sure the Docker application is production ready, go through the checklis
 - Double check the environment variables in [/env/](./env/). 
 - [./env/db.env](./env/db.env) contains the db information for default database name, user, and password. Adjust these for your deployment needs.
 - [./env/django.env](./env/django.env) contains sensitive Django information including secret key and Allowed hosts. Adjust these for your deployment needs.
-- In [docker-compose.yml](./docker-compose.yml), set `PYSVR=0` so Docker will launch Django behind gunicorn and whitenoise and `DEBUG=0` to disable Django's debug mode.
+- In [docker-compose.yml](https://github.com/lucasgcb/django-JD-challenge/blob/main/docker-compose.yml#L18-L19), set `PYSVR=0` so Docker will launch Django behind gunicorn and whitenoise and `DEBUG=0` to disable Django's debug mode.
 
 After making sure the environment variables are set, simply boot docker-compose and the production build will be running on http://localhost:8000
 
