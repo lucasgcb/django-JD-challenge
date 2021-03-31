@@ -24,10 +24,6 @@ class UserSerializer(serializers.ModelSerializer):
 
         return user
 
-
-##
-##Author
-#### Basic serializer does not return image path
 class AuthorSerializer(serializers.ModelSerializer):
  class Meta:
   model = Author	
@@ -37,9 +33,6 @@ class AuthorBasicSerializer(serializers.ModelSerializer):
  class Meta:
   model = Author	
   fields = ('id', 'name',)
-##
-##Article
-#### Basic serializer does not return image path
 
 class ArticleSerializer(serializers.ModelSerializer):
  class Meta:
