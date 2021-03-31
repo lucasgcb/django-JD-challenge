@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'jungle_api'
+    'jungle_api',
+    'drf_yasg'
 ]
 
 REST_FRAMEWORK = {
@@ -48,7 +49,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
         'rest_framework.authentication.TokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication'
     ]
 }
 
