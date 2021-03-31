@@ -13,7 +13,10 @@ services:
     networks:
       - backend
     env_file:
-     - ./env/django.env
+      - ./env/django.env
+    environment:
+      - DEBUG=0
+      - PYSVR=0
     volumes:
       - ./jungle_code/:/code
     ports:
